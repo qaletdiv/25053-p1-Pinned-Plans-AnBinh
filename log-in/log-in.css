@@ -1,0 +1,153 @@
+* {
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    transition: 300ms ease-in-out;
+}
+body {
+    font-size: 1rem;
+    background-color: rgb(207, 225, 241);
+}
+header {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+    max-height: 3.3rem;
+    min-height: 3.125rem;
+    border-bottom: 1px solid black;
+    background-color: rgb(245, 250, 250);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    color: #3C3C3C;
+    padding: 1rem;
+    font-size: 1.2rem;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(123, 123, 123);
+}
+.settings-btn{
+    border: none;
+    background-color: inherit;
+    max-height: 1.875rem;
+    position: absolute;
+    right: 1rem;
+    transition: 300ms ease-in-out;
+    
+}
+.main-page:hover > svg{
+    height: 2rem;
+    width: 2rem;
+}
+.settings-btn:hover{
+    cursor: pointer;
+    rotate: 180deg;
+}
+.settings-btn:hover{
+    cursor: pointer;
+}
+.settings-container{
+    position: fixed;
+    top:-100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(244, 254, 254);
+    width: 26rem;
+    height: 26rem;
+    z-index: 3;
+    padding: 2rem;
+    transition: 300ms ease-in-out;
+}
+.interaction-close{
+    background-color: rgba(0, 0, 0, 0.633);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top:-100%;
+    right:0;
+    transition: 300ms ease-in-out;
+}
+.close-settings{
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    top:0;
+    right: 0
+}
+.close-settings:hover{
+    cursor: pointer;
+}
+.close-settings:hover > svg {
+    fill: red
+}
+.log-in-area {
+    position: relative;
+    width: 25rem;
+    border: 1px solid rgb(31, 31, 31);
+    background-color: rgb(246, 249, 249);
+    margin: auto;
+    margin-top: 10%;
+    padding: 1rem;
+    height: 20rem;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgb(73, 73, 73);
+}
+.log-in-title{
+    text-align: center;
+    font-size: 2rem;
+}
+.log-in-btn{
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    width: fit-content;
+    padding: 0.3rem;
+    float: right;
+    height: fit-content;
+    border-radius: 0.3rem;
+    border: 1px solid gray;
+    transition: 200ms ease-in-out;
+}
+.log-in-btn:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+.password, .account {
+    font-size: 1.3rem;
+}
+.input-password, .input-account{
+    height: 2rem;
+    width: 100%;
+    border-radius: 0.3rem;
+    border: 1px solid gray;
+    padding:0.3rem;
+    margin-bottom: 1rem;
+}
+.direct-to-sign-up{
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color:#3C3C3C
+}
+.sign-up-href {
+    text-decoration: none;
+    color:rgb(60, 60, 241);
+    transition: 100ms ease-in-out;
+}
+.sign-up-href:hover{
+    color: blue;
+}
