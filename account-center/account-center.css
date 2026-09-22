@@ -197,6 +197,37 @@ h3 {
     margin-top: 0.4rem;
     border-radius: 0.4rem;
 }
+.change-password-btn {
+    font-size: 1.4rem;
+    position: absolute;
+    right: 18rem;
+    padding: 0 1rem;
+    margin-top: 0.4rem;
+    border-radius: 0.4rem;
+    border: 1px solid rgb(99, 100, 99);
+    background-color: rgb(248, 248, 248);
+    transition: 300ms ease-in-out;
+}
+.change-password-btn:hover{
+    background-color: rgb(199, 197, 197);
+    cursor: pointer;
+}
+.log-out-btn {
+    font-size: 1.4rem;
+    position: absolute;
+    right: 31.7rem;
+    padding: 0 1rem;
+    margin-top: 0.4rem;
+    border-radius: 0.4rem;
+    border: 1px solid rgb(99, 100, 99);
+    background-color: rgb(255, 0, 0);
+    transition: 300ms ease-in-out;
+    color: white
+}
+.log-out-btn:hover {
+    cursor: pointer;
+    background-color: rgb(179, 0, 0);
+}
 .finish-btn{
     background-color: rgb(248, 248, 248);
     border: 1px solid rgb(99, 100, 99);
@@ -246,6 +277,7 @@ h3 {
     color: #3C3C3C;
     transition: 300ms ease-in-out;
 }
+
 .btn:hover{
     color: rgb(53, 53, 255);
     cursor: pointer;
@@ -256,4 +288,75 @@ h3 {
 .notification-error {
     color: red;
     align-self: center;
+}
+.change-password-area {
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    background-color: #ffffff;
+    padding: 3rem;
+    width: fit-content;
+    font-size: 1.5rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    transition: 300ms ease-in-out;
+}
+.change-password-area > div {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem
+}
+.change-password-area > div > input {
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    border: 1px solid gray;
+    transition: 100ms ease-in-out;
+}
+.password-changing-anouncement {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.p-btn {
+    float: right;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    background-color: #ffffff;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    transition: 300ms ease-in-out;
+}
+
+.reset-password{
+    border: 2px solid rgb(56, 0, 0) 
+}
+.confirm-change{
+    border: 2px solid rgb(0, 65, 13)
+}
+.reset-password:hover{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.348);
+}
+.confirm-change:hover{
+    cursor: pointer;
+    background-color: rgba(1, 255, 1, 0.326);
+}
+.close-p-area{
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    right: -0.7rem;
+    top: -1.4rem;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.close-p-area:hover{
+    cursor: pointer;
+    color: red;
+}
+.notification-error-for-password {
+    color: red;
+    font-size: 1rem;
 }

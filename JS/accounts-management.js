@@ -15,6 +15,16 @@ class basicAccountManagement {
         localStorage.setItem("currentAccount",JSON.stringify({name: this.name, email: this.email, password: this.password}))
         window.location.href = "../account-center/account-center.html"
     }
+    changePassword(updation) {
+        localStorage.setItem("currentAccount",JSON.stringify(updation))
+        for (const account of accounts) {
+            if (account.email===updation.email) {
+                account.password=updation.password
+                break;
+            }
+        }
+        return localStorage.setItem("accounts",JSON.stringify(accounts))
+    }
 }
 
 export default basicAccountManagement;

@@ -1,5 +1,7 @@
 import basicAccountManagement from "../JS/accounts-management.js"
 import dataUsersManagement from "../JS/users-data-management.js"
+import verify from "../JS/verify-account.js"
+verify.verifyGuest()
 const settingsContainer=document.querySelector(".settings-container")
 const interactionBox = document.querySelector(".interaction-close")
 document.querySelector(".close-settings").addEventListener("click",()=>{
