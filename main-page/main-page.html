@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="main-page.css">
 </head>
 <body>
+    <div class = "nav-box">
+        <input type="checkbox" id="nav" style="display: none;">
+        <label for="nav" >
+            <svg  class="nav-icon" xmlns="http://www.w3.org/2000/svg" height="2.25rem" viewBox="0 -960 960 960" width="2.25rem" fill="#e3e3e3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+        </label>
+        <div class="navi-bar">
+            <p class="hello-user">Hello guest !</p>
+            <a href="../account-center/account-center.html" class="general-properties account-center">Account center</a>
+            <a href ="aha.js" class="general-properties storage">Storage</a>
+            <a href ="../function-page/function-page.html" class="general-properties">Workplace</a>
+            <div class="into-account">
+                <a class="sign-up-href" href="../sign-in/sign-up.html">Sign up</a>         
+                <a class="log-in-href" href="../log-in/log-in.html">Login</a>
+            </div>
+            <a href = "main-page.html" class="general-properties log-out">Log out</a>
+        </div>
+    </div>
     <div class="background-color">
     <header>
         <div class="pinned-title">
@@ -55,6 +72,6 @@
     <footer>
         <p>&copy; Copyright belongs to Nguyen An Binh</p>
     </footer>
-    <script src="main-page.js"></script>
+    <script type="module" src="main-page.js"></script>
 </body>
 </html>

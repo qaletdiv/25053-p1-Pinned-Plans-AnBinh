@@ -151,3 +151,10 @@ header {
 .sign-up-href:hover{
     color: blue;
 }
+.notification-error{
+    color:red;
+    font-size:0.8rem
+}
+.error-area {
+    border: 2px solid red;
+}

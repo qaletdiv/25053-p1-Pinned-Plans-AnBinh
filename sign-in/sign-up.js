@@ -1,3 +1,5 @@
+import basicAccountManagement from "../JS/accounts-management.js"
+import dataUsersManagement from "../JS/users-data-management.js"
 const settingsContainer=document.querySelector(".settings-container")
 const interactionBox = document.querySelector(".interaction-close")
 document.querySelector(".close-settings").addEventListener("click",()=>{
@@ -16,22 +18,20 @@ interactionBox.addEventListener("click",()=>{
 const fullname = document.querySelector(".input-name")
 const email = document.querySelector(".input-email")
 const password = document.querySelector(".input-password")
+const cPassword = document.querySelector(".input-cpassword")
 const signUpContainer = document.querySelector(".sign-up-area")
-const userInfos = [{name:"NguyenAnBinh",email:"wukong.dargon@gmail.com",password:"0708115625"}]
-localStorage.setItem("users", JSON.stringify(userInfos))
+
 document.querySelector(".sign-up-btn").addEventListener("click",()=>{
     let error = false;
     if (!checkError(error)) {
-        addingUserInfo()
-        setCurrentUser()
-        window.location.href = "../main-page/main-page.html"
+        const user = new basicAccountManagement(fullname.value,email.value,password.value)
+        const userData = new dataUsersManagement(email.value)
+        userData.addingUserData()
+        user.addingAccount()
+        user.setCurrentAccount()
+        userData.setCurrentUserData()
     }
 })
-const addingUserInfo = () => {
-    userInfos.push({name: fullname.value, email: email.value, password: password.value})
-    console.log(userInfos)
-    localStorage.setItem("users", JSON.stringify(userInfos) )
-}
 function checkError(error) {
     let errorCount = 0;
     const resetNotification = document.querySelectorAll(".notification-error")
@@ -41,9 +41,10 @@ function checkError(error) {
     fullname.style.border = "1px solid black"
     email.style.border = "1px solid black"
     password.style.border = "1px solid black"
+    cPassword.style.border = "2px solid black"
+    const notification = document.createElement("p")
+    notification.setAttribute("class","notification-error")
     if (!fullname.value.trim()) {
-        const notification = document.createElement("p")
-        notification.setAttribute("class","notification-error")
         notification.textContent="*Please write your name"
         fullname.style.border = "2px solid red"
         signUpContainer.appendChild(notification)
@@ -73,8 +74,8 @@ function checkEmail (error) {
         error=true;
         return error;
     }
-    const users = JSON.parse(localStorage.getItem("users"))
-    users.forEach(element=>{
+    const accounts = JSON.parse(localStorage.getItem("accounts"))
+    accounts.forEach(element=>{
         if (inputEmail===element.email) {
             notification.textContent="*This email already has an account"
             email.style.border = "2px solid red"
@@ -107,7 +108,11 @@ function checkPassword(error) {
         signUpContainer.appendChild(notification)
         return error=true;
     }
-}
-function setCurrentUser() {
-    localStorage.setItem("currentUser",JSON.stringify({name: fullname.value, email: email.value, password: password.value}))
+    if (cPassword.value!=password.value) {
+        notification.textContent="Your confirm password is not the same"
+        password.style.border = "2px solid red"
+        cPassword.style.border = "2px solid red"
+        signUpContainer.appendChild(notification)
+        errorCount +=1;
+    }
 }

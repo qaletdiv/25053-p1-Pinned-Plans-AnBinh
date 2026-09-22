@@ -107,7 +107,7 @@ header {
 .name, .password, .email {
     font-size: 1.3rem;
 }
-.input-name, .input-password, .input-email{
+.input-name, .input-password, .input-email, .input-cpassword{
     height: 2rem;
     width: 100%;
     border-radius: 0.3rem;
