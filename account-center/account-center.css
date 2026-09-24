@@ -360,11 +360,7 @@ h3 {
     color: red;
     font-size: 1rem;
 }
-/* =========================================================
-   CSS-ONLY UI REFRESH
-   This section only changes the appearance of the page.
-   HTML and JavaScript are not changed.
-   ========================================================= */
+
 :root {
     --ui-bg-1: #f1f6fa;
     --ui-bg-2: #dce8f1;
@@ -591,10 +587,7 @@ h3 {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V2 — RESPONSIVE POLISH
-   Only presentation is changed. HTML and JavaScript stay untouched.
-   ========================================================= */
+
 
 header {
     padding-inline: clamp(0.75rem, 2vw, 1rem);
@@ -629,7 +622,6 @@ header {
     font-size: 1rem;
 }
 
-/* Make both JS-controlled dialogs fit smaller screens. */
 .recheck {
     width: min(30rem, calc(100vw - 2rem));
     height: auto;
@@ -714,7 +706,6 @@ header {
         max-width: 100%;
     }
 
-    /* Buttons become normal page controls on small screens instead of sitting off-screen. */
     .log-out-btn,
     .change-password-btn,
     .adjust-btn,
@@ -809,7 +800,6 @@ header {
     }
 }
 
-/* Slightly larger action controls on desktop without changing their behaviour. */
 .log-out-btn,
 .change-password-btn,
 .adjust-btn,
@@ -819,9 +809,7 @@ header {
     border-radius: 0.6rem;
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V3 — MOBILE REFINEMENT
-   ========================================================= */
+
 @media (max-width: 600px) {
     body {
         min-height: 100dvh;
@@ -985,13 +973,7 @@ header {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V4 — ROBUST CONTENT + DIALOG FIXES
-   Keeps the existing HTML/JavaScript untouched.
-   ========================================================= */
 
-/* Prevent long profile values from forcing the page wider or
-   collapsing fields into awkward narrow columns. */
 .account-area {
     height: auto;
     min-height: 35rem;
@@ -1023,14 +1005,12 @@ header {
     align-items: start;
 }
 
-/* Normal rows: label + value/input. */
 .info-container > div:not(:has(> div)) {
     display: grid;
     grid-template-columns: minmax(7.5rem, 9.5rem) minmax(0, 1fr);
     gap: 0.65rem 1rem;
 }
 
-/* Age/Gender row: two self-contained columns. */
 .info-container > div:has(> div) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1062,7 +1042,6 @@ header {
     align-self: start;
 }
 
-/* Keep edit controls inside the available information column. */
 .input-name,
 .input-nationality,
 .input-age,
@@ -1071,8 +1050,7 @@ header {
     max-width: 100%;
 }
 
-/* The old close button sat outside the dialog. Combined with overflow:auto,
-   that produced the horizontal scrollbar visible in the screenshot. */
+
 .change-password-area {
     box-sizing: border-box;
     width: min(36rem, calc(100vw - 2rem));

@@ -34,7 +34,7 @@ if (!rawCurrentAccount) {
     document.querySelector('.log-out').style.display='none'
 } else if (rawCurrentAccount.length!=0) {
     const trueCurrentAccount = JSON.parse(rawCurrentAccount)
-    document.querySelector('.main-btn').setAttribute("href","../account-center/account-center.html")
+    document.querySelector('.main-btn').setAttribute("href","../select-workplace/select-workplace.html")
     document.querySelector('.account-center').style.display='block'
     document.querySelector('.storage').style.display='block'
     document.querySelector('.log-out').style.display='block'

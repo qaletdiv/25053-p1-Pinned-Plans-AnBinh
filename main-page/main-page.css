@@ -442,11 +442,7 @@ svg {
     cursor: pointer;
     color: rgb(255, 0, 0);
 }
-/* =========================================================
-   CSS-ONLY UI REFRESH
-   This section only changes the appearance of the page.
-   HTML and JavaScript are not changed.
-   ========================================================= */
+
 :root {
     --ui-ink: #f8fafc;
     --ui-muted: #cbd5e1;
@@ -647,10 +643,7 @@ footer {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V2 — RESPONSIVE POLISH
-   Only presentation is changed. HTML and JavaScript stay untouched.
-   ========================================================= */
+
 
 .background-color {
     height: auto;
@@ -658,7 +651,6 @@ footer {
     padding-bottom: 7rem;
 }
 
-/* A slightly calmer board while keeping the handmade note style. */
 .pinned-title {
     width: min(70rem, calc(100% - 3rem));
     padding-inline: clamp(0.65rem, 2vw, 1.5rem);
@@ -688,7 +680,6 @@ footer {
     place-items: center;
 }
 
-/* Center the popup on every viewport. JS still only changes its top value. */
 .box {
     left: 50%;
     right: auto;
@@ -718,7 +709,6 @@ footer {
     z-index: 2;
 }
 
-/* Keep navigation above page content without changing checkbox behaviour. */
 .navi-bar {
     z-index: 5;
 }
@@ -835,16 +825,12 @@ footer {
     }
 }
 
-/* Small V2 correction: remove the old fixed 15rem button height. */
 .main-btn,
 .btn {
     height: auto;
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V3 — MOBILE REFINEMENT
-   Mobile layout improvements only. HTML and JavaScript unchanged.
-   ========================================================= */
+
 @media (max-width: 600px) {
     html {
         font-size: 15px;
@@ -913,7 +899,6 @@ footer {
         box-shadow: 0 8px 18px rgba(245, 158, 11, 0.18);
     }
 
-    /* Turn the existing navigation into a deliberate mobile drawer. */
     .navi-bar {
         width: min(82vw, 17rem);
         left: max(-82vw, -17rem);
@@ -1028,10 +1013,7 @@ footer {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V4 — OVERFLOW + DRAWER HARDENING
-   Keeps the existing HTML/JavaScript untouched.
-   ========================================================= */
+
 
 html,
 body {
@@ -1045,8 +1027,7 @@ body {
     overflow-x: hidden;
 }
 
-/* A very long account name must stay inside the drawer instead of
-   expanding the document width and making the main page appear shifted. */
+
 .navi-bar {
     overflow-x: hidden;
     overflow-y: auto;

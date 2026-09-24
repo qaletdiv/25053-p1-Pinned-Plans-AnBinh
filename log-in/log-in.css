@@ -158,11 +158,7 @@ header {
 .error-area {
     border: 2px solid red;
 }
-/* =========================================================
-   CSS-ONLY UI REFRESH
-   This section only changes the appearance of the page.
-   HTML and JavaScript are not changed.
-   ========================================================= */
+
 :root {
     --ui-bg-1: #f3f7fb;
     --ui-bg-2: #dfeaf4;
@@ -322,12 +318,7 @@ header {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V2 — RESPONSIVE POLISH
-   Only presentation is changed. HTML and JavaScript stay untouched.
-   ========================================================= */
 
-/* Keep the header comfortable on narrow screens. */
 header {
     padding-inline: clamp(0.75rem, 2vw, 1rem);
 }
@@ -346,7 +337,6 @@ header {
     place-items: center;
 }
 
-/* Make the card scale smoothly instead of relying on one fixed width/height. */
 .log-in-area {
     width: min(28rem, calc(100% - 2rem));
     height: auto;
@@ -366,7 +356,6 @@ header {
     padding-inline: 0.7rem;
 }
 
-/* Avoid validation text colliding with the button. */
 .log-in-btn {
     float: none;
     margin-left: auto;
@@ -379,7 +368,6 @@ header {
     margin-top: 0.7rem;
 }
 
-/* JS still controls the modal's top position; CSS only makes it fit the viewport. */
 .settings-container {
     width: min(26rem, calc(100vw - 2rem));
     height: auto;
@@ -425,9 +413,7 @@ header {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V3 — MOBILE REFINEMENT
-   ========================================================= */
+
 @media (max-width: 600px) {
     body {
         min-height: 100dvh;

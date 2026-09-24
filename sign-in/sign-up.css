@@ -155,11 +155,7 @@ header {
 .log-in-href:hover{
     color: blue;
 }
-/* =========================================================
-   CSS-ONLY UI REFRESH
-   This section only changes the appearance of the page.
-   HTML and JavaScript are not changed.
-   ========================================================= */
+
 :root {
     --ui-bg-1: #f3f7fb;
     --ui-bg-2: #dfeaf4;
@@ -321,10 +317,7 @@ header {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V2 — RESPONSIVE POLISH
-   Only presentation is changed. HTML and JavaScript stay untouched.
-   ========================================================= */
+
 
 header {
     padding-inline: clamp(0.75rem, 2vw, 1rem);
@@ -344,7 +337,6 @@ header {
     place-items: center;
 }
 
-/* Flexible height is important because JS may append validation messages. */
 .sign-up-area {
     width: min(28rem, calc(100% - 2rem));
     height: auto;
@@ -424,9 +416,7 @@ header {
     }
 }
 
-/* =========================================================
-   CSS-ONLY UI REFRESH V3 — MOBILE REFINEMENT
-   ========================================================= */
+
 @media (max-width: 600px) {
     body {
         min-height: 100dvh;
