@@ -12,16 +12,16 @@ const usersData =[
 ]
 
 const plans = [
-{ID: "wukong.dargon@gmail.com1", planName:"First plan", description: "Test plan 1", Date: "14/03/2026", background:"#FAEBD7", borderColor:"rgb(214, 126, 74)", ratio: "4/3"}, 
-{ID: "wukong.dargon@gmail.com2", planName:"Second plan", description: "Test plan 2", Date: "27/07/2026", background:"#7FFFD4", borderColor:"#3A8D7C", ratio: "1/1"}, 
-{ID: "abc@gmail.com1", planName:"I", description: "Oh yessss", nDate: "05/01/2026", background:"#000000", borderColor:"rgb(119, 87, 214)", ratio: "3/4"}, 
-{ID: "cbb@alo.com1", planName:"This is my plan", description: "Oh noooo", Date: "19/05/2026", background:"rgb(255, 214, 165)", borderColor:"#E28A5B", ratio: "3/2"}, 
-{ID: "cbb@alo.com2", planName:"So this is it", description: "Hello anh em", Date: "02/09/2026", background:"#CDEBFF", borderColor:"rgb(71, 143, 190)", ratio: "4/3"}, 
-{ID: "cbb@alo.com3", planName:"Finance", description: "Goodby everyone", Date: "23/11/2025", background:"rgb(221, 255, 200)", borderColor:"#6BA84A", ratio: "2/3"}, 
-{ID: "cbb@alo.com4", planName:"Travel", description: "This is the last one", Date: "08/08/2026", background:"#FFE0F0", borderColor:"rgb(205, 92, 140)", ratio: "1/1"}, 
-{ID: "eld@yahoo.gmai1", planName:"Business", description: "Yohohoho this is the bullestin plan!", Date: "31/12/2025", background:"rgb(255, 239, 168)", borderColor:"#D4A72C", ratio: "3/4"}, 
-{ID: "eld@yahoo.gmai2", planName:"Project", description: "I don't think this will work", Date: "11/04/2026", background:"#D9D2FF", borderColor:"rgb(106, 90, 205)", ratio: "3/2"}, 
-{ID: "eld@yahoo.gmai3", planName:"Investment", description: "Maybe it will work", Date: "16/06/2026", background:"rgb(198, 245, 230)", borderColor:"#3D9B7E", ratio: "4/3"}
+{ID: "wukong.dargon@gmail.com1", planName:"First plan", description: "Test plan 1", Date: "14/03/2026", background:"#FAEBD7", borderColor:"rgb(214, 126, 74)", ratio: "4/3", Updated:"24/05/2026"}, 
+{ID: "wukong.dargon@gmail.com2", planName:"Second plan", description: "Test plan 2", Date: "27/07/2026", background:"#7FFFD4", borderColor:"#3A8D7C", ratio: "1/1", Updated:"18/09/2026"}, 
+{ID: "abc@gmail.com1", planName:"I", description: "Oh yessss", Date: "05/01/2026", background:"#000000", borderColor:"rgb(119, 87, 214)", ratio: "3/4", Updated:"22/02/2026"}, 
+{ID: "cbb@alo.com1", planName:"This is my plan", description: "Oh noooo", Date: "19/05/2026", background:"rgb(255, 214, 165)", borderColor:"#E28A5B", ratio: "3/2", Updated:"03/08/2026"}, 
+{ID: "cbb@alo.com2", planName:"So this is it", description: "Hello anh em", Date: "02/09/2026", background:"#CDEBFF", borderColor:"rgb(71, 143, 190)", ratio: "4/3", Updated:"28/09/2026"}, 
+{ID: "cbb@alo.com3", planName:"Finance", description: "Goodby everyone", Date: "23/11/2025", background:"rgb(221, 255, 200)", borderColor:"#6BA84A", ratio: "2/3", Updated:"17/04/2026"}, 
+{ID: "cbb@alo.com4", planName:"Travel", description: "This is the last one", Date: "08/08/2026", background:"#FFE0F0", borderColor:"rgb(205, 92, 140)", ratio: "1/1", Updated:"14/09/2026"}, 
+{ID: "eld@yahoo.gmai1", planName:"Business", description: "Yohohoho this is the bullestin plan!", Date: "31/12/2025", background:"rgb(255, 239, 168)", borderColor:"#D4A72C", ratio: "3/4", Updated:"11/03/2026"}, 
+{ID: "eld@yahoo.gmai2", planName:"Project", description: "I don't think this will work", Date: "11/04/2026", background:"#D9D2FF", borderColor:"rgb(106, 90, 205)", ratio: "3/2", Updated:"30/06/2026"}, 
+{ID: "eld@yahoo.gmai3", planName:"Investment", description: "Maybe it will work", Date: "16/06/2026", background:"rgb(198, 245, 230)", borderColor:"#3D9B7E", ratio: "4/3", Updated:"07/09/2026"}
 ]
 
 export default {accounts,usersData,plans}

@@ -21,11 +21,13 @@ class dataUsersManagement{
         localStorage.setItem("currentUserData",JSON.stringify(currentUserData[0]))
     }
     setUserData(userInfo,currentAccount,inputName,newAvatar) {
+        const rawCurrentPlans =localStorage.getItem("currentUserPlans")
+        const currentPlans = JSON.parse(rawCurrentPlans)
         const rawAccounts = localStorage.getItem("accounts")
         const accounts = JSON.parse(rawAccounts)
         const rawUsersData=localStorage.getItem("usersData")
         const usersData = JSON.parse(rawUsersData)
-        userInfo = {email:this.email,nationality:this.nationality,age:this.age,gender:this.gender,total:0,avatar:`${newAvatar}`}
+        userInfo = {email:this.email,nationality:this.nationality,age:this.age,gender:this.gender,total:currentPlans.length,avatar:`${newAvatar}`}
         for (let i = 0; i<rawAccounts.length;i++) {
             if (usersData[i].email===userInfo.email) {
                 usersData[i]=userInfo
