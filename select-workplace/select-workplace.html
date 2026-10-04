@@ -55,7 +55,7 @@
         <div class="plan-information">
         <div>
             <p>Name:</p>
-            <input type="text" class="planName">
+            <input type="text" class="planName" placeholder="Write your plan's name here.">
         </div>
         <div class="color-chosen">
             <p>Background color:</p>
@@ -64,16 +64,16 @@
                 <option>Image(demo)</option>
             </select>
             <input type="url" class="background-image" placeholder="Paste you image URL here">
-            <input type="color" class="background-color" onchange="showHex();">
+            <input type="color" class="background-color">
             </select>
         </div>
         <div class="color-chosen">
             <p>Border color:</p>
             <select class="border-requirement">
-                <option>None</option>
                 <option>Border</option>
+                <option>None</option>
             </select>
-            <input type="color" class="border" onchange="showHex();">
+            <input type="color" class="border">
         </div>
         <div>
             <p>Ratio / scale:</p>
@@ -87,7 +87,7 @@
         </div>
         <div>
             <p>Description:</p>
-            <input type="text" class="description">
+            <textarea class="description" placeholder="Depict your plan." style="resize: none;"> </textarea>
         </div>
         <button class="close">X</button>
         <button class="reset btn">Reset</button>

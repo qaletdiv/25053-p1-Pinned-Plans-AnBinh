@@ -7,6 +7,9 @@ if (!testData) {
     localStorage.setItem("plans", JSON.stringify(data.plans))
     localStorage.setItem("currentAccount","")
     localStorage.setItem("currentUserData","")
+    localStorage.setItem("currentUserPlans","")
+    localStorage.setItem("currentPlan","")
+
 window.location.href = "../main-page/main-page.html"
 } else {
     window.location.href = "../main-page/main-page.html"
