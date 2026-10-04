@@ -33,8 +33,10 @@ class  plansBriefManagement {
         let index = 1
         if (rawCurrentUserPlans) {
             currentUserPlans= JSON.parse(rawCurrentUserPlans)
-            const lastPlanId = currentUserPlans[currentUserPlans.length-1].ID
-            index = Number(lastPlanId.match(/\d+$/)[0]) + 1
+            if (currentUserPlans[0]) {
+                const lastPlanId = currentUserPlans[currentUserPlans.length-1].ID
+                index = Number(lastPlanId.match(/\d+$/)[0]) + 1
+            }
         }
         const currentPlan = {ID:`${this.email}${index}`, planName:this.planName, description: this.desc, Date: this.date, background:this.background, borderColor:this.border, ratio: this.ratio}
         currentUserPlans.push(currentPlan)
