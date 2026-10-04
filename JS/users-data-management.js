@@ -22,12 +22,16 @@ class dataUsersManagement{
     }
     setUserData(userInfo,currentAccount,inputName,newAvatar) {
         const rawCurrentPlans =localStorage.getItem("currentUserPlans")
-        const currentPlans = JSON.parse(rawCurrentPlans)
+        let plansCount = 0
+        if (rawCurrentPlans) {
+            const currentPlans = JSON.parse(rawCurrentPlans)
+            plansCount = currentPlans.length
+        }
         const rawAccounts = localStorage.getItem("accounts")
         const accounts = JSON.parse(rawAccounts)
         const rawUsersData=localStorage.getItem("usersData")
         const usersData = JSON.parse(rawUsersData)
-        userInfo = {email:this.email,nationality:this.nationality,age:this.age,gender:this.gender,total:currentPlans.length,avatar:`${newAvatar}`}
+        userInfo = {email:this.email,nationality:this.nationality,age:this.age,gender:this.gender,total:plansCount,avatar:`${newAvatar}`}
         for (let i = 0; i<rawAccounts.length;i++) {
             if (usersData[i].email===userInfo.email) {
                 usersData[i]=userInfo
