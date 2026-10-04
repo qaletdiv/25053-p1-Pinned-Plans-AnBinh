@@ -44,6 +44,8 @@ if (!rawCurrentAccount) {
 document.querySelector(".log-out").addEventListener("click",() => {
     localStorage.setItem("currentAccount","")
     localStorage.setItem("currentUserData","")
+    localStorage.setItem("currentUserPlans","")
+    localStorage.setItem("currentPlan","")
     window.location.href = "../log-in/log-in.html"
 })
 

@@ -19,6 +19,12 @@ const age = document.querySelector(".age")
 const gender = document.querySelector(".gender")
 const totalPlans = document.querySelector(".total")
 const avatar = document.querySelector(".avatar")
+const rawTotalPlans = localStorage.getItem("currentUserPlans")
+if (rawTotalPlans) {
+    totalPlans.textContent = `${JSON.parse(rawTotalPlans).length}` 
+} else {
+    totalPlans.textContent =`0`
+}
 
 const inputName = document.querySelector(".input-name")
 const inputNationality = document.querySelector(".input-nationality")
@@ -35,6 +41,7 @@ nationality.textContent = userInfo.nationality;
 age.textContent = userInfo.age;
 gender.textContent = userInfo.gender;
 avatar.setAttribute("src", userInfo.avatar)
+
 
 
 adjustBtn.addEventListener("click", () => {
@@ -209,6 +216,8 @@ document.querySelector(".confirm-change").addEventListener("click",()=>{
 document.querySelector(".log-out-btn").addEventListener("click",()=>{
     localStorage.setItem("currentAccount","")
     localStorage.setItem("currentUserData","")
+    localStorage.setItem("currentUserPlans","")
+    localStorage.setItem("currentPlan","")
     window.location.href = "../log-in/log-in.html"
 })
 
